@@ -11,15 +11,18 @@ extension ContextExt on BuildContext {
   //theme
   ThemeData get theme => Theme.of(this);
   TextTheme get textTheme => Theme.of(this).textTheme;
-  TextStyle? get titleLarge => textTheme.titleLarge;
-  TextStyle? get bodyMedium => textTheme.bodyMedium;
-  TextStyle? get bodySmall => textTheme.bodySmall;
-  TextStyle? get labelLarge => textTheme.labelLarge;
-  TextStyle? get labelMedium => textTheme.labelMedium;
-  TextStyle? get labelSmall => textTheme.labelSmall;
-  TextStyle? get headlineMedium => textTheme.headlineMedium;
-  TextStyle? get headlineSmall => textTheme.headlineSmall;
-  TextStyle? get titleMedium => textTheme.titleMedium;
+  TextStyle get titleLarge => textTheme.titleLarge!;
+  TextStyle get bodyMedium => textTheme.bodyMedium!;
+  TextStyle get bodySmall => textTheme.bodySmall!;
+  TextStyle get bodyLarge => textTheme.bodyLarge!;
+  TextStyle get labelLarge => textTheme.labelLarge!;
+  TextStyle get labelMedium => textTheme.labelMedium!;
+  TextStyle get labelSmall => textTheme.labelSmall!;
+  TextStyle get headlineMedium => textTheme.headlineMedium!;
+  TextStyle get headlineSmall => textTheme.headlineSmall!;
+  TextStyle get headlineLarge => textTheme.headlineLarge!;
+  TextStyle get titleMedium => textTheme.titleMedium!;
+  TextStyle get titleSmall => textTheme.titleSmall!;
 
   void showSnack(String msg, {Color color = Colors.black}) {
     ScaffoldMessenger.of(this).showSnackBar(SnackBar(
